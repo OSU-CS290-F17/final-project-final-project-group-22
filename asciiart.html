@@ -6,7 +6,7 @@
 
     <!-- This is a 3rd-party stylesheet to make available the font families to be used for this page. -->
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
 
 
     <!-- This is a 3rd-party stylesheet to include Font Awesome icons: http://fontawesome.io/ -->
@@ -17,38 +17,30 @@
 
   <header>
       <div class="header-image-container">
-        <img src="https://cdn.instructables.com/F9S/83XE/GHTLUNZN/F9S83XEGHTLUNZN.LARGE.jpg" alt="ASCII ART">
+        <img src="https://parse-o-matic.com/common/images/pc-extended-ascii.gif" alt="ASCII ART">
       </div>
-      <h1 class="site-title"><a href="#">ASCII ART</a></h1>
+      <h1 class="site-title"><a href="#">ASCII ART</a>
+
+        <button id="filter-submit-button" class="action-button">Submit</button></h1>
+        <button id="filter-search-button" class="action-button">Search</button>
+        <!-- <input type="text" name="filter-text" id="filter-text" class="filter-input"> -->
+
+        <!-- <div class="filter-input-container">
+                  <label for="filter-category">Category</label>
+                  <select id="filter-category" class="filter-input" name="filter-category">
+                    <option selected value="">Any</option>
+                    <option>Animal</option>
+                    <option>Person</option>
+                    <option>Place</option>
+                    <option>Funny</option>
+                    <option>Note Worthy</option>
+                    <option>Misc</option>
+                  </select>
+                </div> -->
   </header>
 
 <main class ="content">
-    <aside class="catagories">
-<h2>The Fizz</h2>
 
-        <div class="filter-input-container">
-                <label for="filter-text" class="filter-input-label">Text</label>
-                <input type="text" name="filter-text" id="filter-text" class="filter-input">
-              </div>
-
-              <div class="filter-input-container">
-                        <label for="filter-category">Category</label>
-                        <select id="filter-category" class="filter-input" name="filter-category">
-                          <option selected value="">Any</option>
-                          <option>Animal</option>
-                          <option>Person</option>
-                          <option>Place</option>
-                          <option>Funny</option>
-                          <option>Note Worthy</option>
-                          <option>Misc</option>
-                        </select>
-                      </div>
-
-      <button id="filter-update-button" class="action-button">Update</button>
-        <button id="filter-submit-button" class="action-button">Submit</button>
-</aside>
-
-      <i class="fa fa-chevron-circle-right" aria-hidden="true"><i>
       </body>
   </html>
 
@@ -60,7 +52,20 @@
         <img src="https://sc02.alicdn.com/kf/HTB1bv23QpXXXXb1XXXXq6xXFXXXr/High-payload-150kg-6-DOF-robot-arm.jpg" alt="Robot Arm 6 DOF">
       </div>
       <div class = "result-info-container">
-        <a href="#" class="result-title">Robot Arm 6 DOF</a> <br> <span class="userName">USER INPUT:::::German Chancellor Angela Merkel of the Christian Democratic Union (CDU) and the chair of the CDU youth organization, Paul Ziemiak, talk on one of the back benches during a session of the parliament in Berlin on Nov. 21. </span>
+        <a href="#" class="result-title">Robot Arm 6 DOF</a> <br> <span class="userIn">USER INPUT:::::German Chancellor Angela Merkel of the Christian Democratic Union (CDU) and the chair of the CDU youth organization, Paul Ziemiak, talk on one of the back benches during a session of the parliament in Berlin on Nov. 21. </span>
+      </div>
+      <textarea rows="4" cols="50" name="comment" form="usrform">
+      Enter text here...</textarea>
+    </div>
+  </div>
+
+  <div class ="art">
+    <div class ="art-contents">
+      <div class ="result-image-container">
+        <img src="https://sc02.alicdn.com/kf/HTB1bv23QpXXXXb1XXXXq6xXFXXXr/High-payload-150kg-6-DOF-robot-arm.jpg" alt="Robot Arm 6 DOF">
+      </div>
+      <div class = "result-info-container">
+        <a href="#" class="result-title">Robot Arm 6 DOF</a> <br> <span class="userIn">USER INPUT:::::German Chancellor Angela Merkel of the Christian Democratic Union (CDU) and the chair of the CDU youth organization, Paul Ziemiak, talk on one of the back benches during a session of the parliament in Berlin on Nov. 21. </span>
       </div>
     </div>
   </div>
@@ -71,7 +76,7 @@
         <img src="https://sc02.alicdn.com/kf/HTB1bv23QpXXXXb1XXXXq6xXFXXXr/High-payload-150kg-6-DOF-robot-arm.jpg" alt="Robot Arm 6 DOF">
       </div>
       <div class = "result-info-container">
-        <a href="#" class="result-title">Robot Arm 6 DOF</a> <br> <span class="userName">USER INPUT:::::German Chancellor Angela Merkel of the Christian Democratic Union (CDU) and the chair of the CDU youth organization, Paul Ziemiak, talk on one of the back benches during a session of the parliament in Berlin on Nov. 21. </span>
+        <a href="#" class="result-title">Robot Arm 6 DOF</a> <br> <span class="userIn">USER INPUT:::::German Chancellor Angela Merkel of the Christian Democratic Union (CDU) and the chair of the CDU youth organization, Paul Ziemiak, talk on one of the back benches during a session of the parliament in Berlin on Nov. 21. </span>
       </div>
     </div>
   </div>
@@ -82,7 +87,7 @@
         <img src="https://sc02.alicdn.com/kf/HTB1bv23QpXXXXb1XXXXq6xXFXXXr/High-payload-150kg-6-DOF-robot-arm.jpg" alt="Robot Arm 6 DOF">
       </div>
       <div class = "result-info-container">
-        <a href="#" class="result-title">Robot Arm 6 DOF</a> <br> <span class="userName">USER INPUT:::::German Chancellor Angela Merkel of the Christian Democratic Union (CDU) and the chair of the CDU youth organization, Paul Ziemiak, talk on one of the back benches during a session of the parliament in Berlin on Nov. 21. </span>
+        <a href="#" class="result-title">Robot Arm 6 DOF</a> <br> <span class="userIn">USER INPUT:::::German Chancellor Angela Merkel of the Christian Democratic Union (CDU) and the chair of the CDU youth organization, Paul Ziemiak, talk on one of the back benches during a session of the parliament in Berlin on Nov. 21. </span>
       </div>
     </div>
   </div>
@@ -93,7 +98,7 @@
         <img src="https://sc02.alicdn.com/kf/HTB1bv23QpXXXXb1XXXXq6xXFXXXr/High-payload-150kg-6-DOF-robot-arm.jpg" alt="Robot Arm 6 DOF">
       </div>
       <div class = "result-info-container">
-        <a href="#" class="result-title">Robot Arm 6 DOF</a> <br> <span class="userName">USER INPUT:::::German Chancellor Angela Merkel of the Christian Democratic Union (CDU) and the chair of the CDU youth organization, Paul Ziemiak, talk on one of the back benches during a session of the parliament in Berlin on Nov. 21. </span>
+        <a href="#" class="result-title">Robot Arm 6 DOF</a> <br> <span class="userIn">USER INPUT:::::German Chancellor Angela Merkel of the Christian Democratic Union (CDU) and the chair of the CDU youth organization, Paul Ziemiak, talk on one of the back benches during a session of the parliament in Berlin on Nov. 21. </span>
       </div>
     </div>
   </div>
@@ -104,7 +109,7 @@
         <img src="https://sc02.alicdn.com/kf/HTB1bv23QpXXXXb1XXXXq6xXFXXXr/High-payload-150kg-6-DOF-robot-arm.jpg" alt="Robot Arm 6 DOF">
       </div>
       <div class = "result-info-container">
-        <a href="#" class="result-title">Robot Arm 6 DOF</a> <br> <span class="userName">USER INPUT:::::German Chancellor Angela Merkel of the Christian Democratic Union (CDU) and the chair of the CDU youth organization, Paul Ziemiak, talk on one of the back benches during a session of the parliament in Berlin on Nov. 21. </span>
+        <a href="#" class="result-title">Robot Arm 6 DOF</a> <br> <span class="userIn">USER INPUT:::::German Chancellor Angela Merkel of the Christian Democratic Union (CDU) and the chair of the CDU youth organization, Paul Ziemiak, talk on one of the back benches during a session of the parliament in Berlin on Nov. 21. </span>
       </div>
     </div>
   </div>
@@ -115,7 +120,7 @@
         <img src="https://sc02.alicdn.com/kf/HTB1bv23QpXXXXb1XXXXq6xXFXXXr/High-payload-150kg-6-DOF-robot-arm.jpg" alt="Robot Arm 6 DOF">
       </div>
       <div class = "result-info-container">
-        <a href="#" class="result-title">Robot Arm 6 DOF</a> <br> <span class="userName">USER INPUT:::::German Chancellor Angela Merkel of the Christian Democratic Union (CDU) and the chair of the CDU youth organization, Paul Ziemiak, talk on one of the back benches during a session of the parliament in Berlin on Nov. 21. </span>
+        <a href="#" class="result-title">Robot Arm 6 DOF</a> <br> <span class="userIn">USER INPUT:::::German Chancellor Angela Merkel of the Christian Democratic Union (CDU) and the chair of the CDU youth organization, Paul Ziemiak, talk on one of the back benches during a session of the parliament in Berlin on Nov. 21. </span>
       </div>
     </div>
   </div>
@@ -126,7 +131,7 @@
         <img src="https://sc02.alicdn.com/kf/HTB1bv23QpXXXXb1XXXXq6xXFXXXr/High-payload-150kg-6-DOF-robot-arm.jpg" alt="Robot Arm 6 DOF">
       </div>
       <div class = "result-info-container">
-        <a href="#" class="result-title">Robot Arm 6 DOF</a> <br> <span class="userName">USER INPUT:::::German Chancellor Angela Merkel of the Christian Democratic Union (CDU) and the chair of the CDU youth organization, Paul Ziemiak, talk on one of the back benches during a session of the parliament in Berlin on Nov. 21. </span>
+        <a href="#" class="result-title">Robot Arm 6 DOF</a> <br> <span class="userIn">USER INPUT:::::German Chancellor Angela Merkel of the Christian Democratic Union (CDU) and the chair of the CDU youth organization, Paul Ziemiak, talk on one of the back benches during a session of the parliament in Berlin on Nov. 21. </span>
       </div>
     </div>
   </div>
@@ -137,7 +142,7 @@
         <img src="https://sc02.alicdn.com/kf/HTB1bv23QpXXXXb1XXXXq6xXFXXXr/High-payload-150kg-6-DOF-robot-arm.jpg" alt="Robot Arm 6 DOF">
       </div>
       <div class = "result-info-container">
-        <a href="#" class="result-title">Robot Arm 6 DOF</a> <br> <span class="userName">USER INPUT:::::German Chancellor Angela Merkel of the Christian Democratic Union (CDU) and the chair of the CDU youth organization, Paul Ziemiak, talk on one of the back benches during a session of the parliament in Berlin on Nov. 21. </span>
+        <a href="#" class="result-title">Robot Arm 6 DOF</a> <br> <span class="userIn">USER INPUT:::::German Chancellor Angela Merkel of the Christian Democratic Union (CDU) and the chair of the CDU youth organization, Paul Ziemiak, talk on one of the back benches during a session of the parliament in Berlin on Nov. 21. </span>
       </div>
     </div>
   </div>
@@ -148,7 +153,7 @@
         <img src="https://sc02.alicdn.com/kf/HTB1bv23QpXXXXb1XXXXq6xXFXXXr/High-payload-150kg-6-DOF-robot-arm.jpg" alt="Robot Arm 6 DOF">
       </div>
       <div class = "result-info-container">
-        <a href="#" class="result-title">Robot Arm 6 DOF</a> <br> <span class="userName">USER INPUT:::::German Chancellor Angela Merkel of the Christian Democratic Union (CDU) and the chair of the CDU youth organization, Paul Ziemiak, talk on one of the back benches during a session of the parliament in Berlin on Nov. 21. </span>
+        <a href="#" class="result-title">Robot Arm 6 DOF</a> <br> <span class="userIn">USER INPUT:::::German Chancellor Angela Merkel of the Christian Democratic Union (CDU) and the chair of the CDU youth organization, Paul Ziemiak, talk on one of the back benches during a session of the parliament in Berlin on Nov. 21. </span>
       </div>
     </div>
   </div>
@@ -159,18 +164,7 @@
         <img src="https://sc02.alicdn.com/kf/HTB1bv23QpXXXXb1XXXXq6xXFXXXr/High-payload-150kg-6-DOF-robot-arm.jpg" alt="Robot Arm 6 DOF">
       </div>
       <div class = "result-info-container">
-        <a href="#" class="result-title">Robot Arm 6 DOF</a> <br> <span class="userName">USER INPUT:::::German Chancellor Angela Merkel of the Christian Democratic Union (CDU) and the chair of the CDU youth organization, Paul Ziemiak, talk on one of the back benches during a session of the parliament in Berlin on Nov. 21. </span>
-      </div>
-    </div>
-  </div>
-
-  <div class ="art">
-    <div class ="art-contents">
-      <div class ="result-image-container">
-        <img src="https://sc02.alicdn.com/kf/HTB1bv23QpXXXXb1XXXXq6xXFXXXr/High-payload-150kg-6-DOF-robot-arm.jpg" alt="Robot Arm 6 DOF">
-      </div>
-      <div class = "result-info-container">
-        <a href="#" class="result-title">Robot Arm 6 DOF</a> <br> <span class="userName">USER INPUT:::::German Chancellor Angela Merkel of the Christian Democratic Union (CDU) and the chair of the CDU youth organization, Paul Ziemiak, talk on one of the back benches during a session of the parliament in Berlin on Nov. 21. </span>
+        <a href="#" class="result-title">Robot Arm 6 DOF</a> <br> <span class="userIn">USER INPUT:::::German Chancellor Angela Merkel of the Christian Democratic Union (CDU) and the chair of the CDU youth organization, Paul Ziemiak, talk on one of the back benches during a session of the parliament in Berlin on Nov. 21. </span>
       </div>
     </div>
   </div>
