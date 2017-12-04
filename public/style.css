@@ -1,0 +1,175 @@
+header {
+  font-family: 'Ubuntu', sans-serif;
+  }
+
+body {
+  font-family: 'Ubuntu';
+}
+
+.header-image-container {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  background-color: #ff6600;
+  display: inline;
+}
+
+.header-image-container img {
+  height: 200px;
+  width: 200px;
+}
+
+.site-title {
+  position:relative;
+  top: 40px;
+  left: 220px;
+  display:inline-block;
+}
+
+.site-title a {
+  /*position: relative;*/
+  /*display: inline-block;*/
+  font-weight:100;
+  font-size: 100px;
+  text-decoration: none;
+  color:black;
+}
+
+.hidden {
+  display: none;
+}
+
+#filter-search-button.action-button:hover{
+  background-color: orange;
+}
+
+#filter-submit-button.action-button {
+  position:relative;
+  display:inline-block;
+  top: 5px;
+  left: 500px;
+  border-radius: 2%;
+  width: 300px;
+  height: 75px;
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  border-radius: 10px;
+}
+
+#filter-submit-button.action-button:hover{
+  background-color: orange;
+}
+
+#filter-search-button.action-button {
+  position:relative;
+  display: inline-block;
+  top: 45px;
+  left: 50px;
+  border-radius: 2%;
+  width: 300px;
+  /*margin-top: 1000px;*/
+  /*margin-left: 450px;*/
+  height: 75px;
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  border-radius: 10px;
+}
+
+p {
+    color: Orange;
+    font-family: "Courier New", Courier,monospace;
+    font-size:10px;
+    line-height:6px;
+}
+h2 {
+  margin-left:10px;
+}
+
+label {
+  margin-left: 10px;
+}
+
+.catagories {
+  font-size: 20px;
+  font-weight:bold;
+  position: absolute;
+  top: 235px;
+  max-width: 200px;
+  border-width:thick;
+}
+.filter-input{
+  display: flex;
+  border-radius: 5px;
+  border-width: medium;
+  height: 30px;
+}
+#filter-text.filter-input{
+  display:inline;
+  width: 170px;
+  border-color: gray;
+  border-width: thin;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+#filter-category.filter-input {
+  display: inline;
+  width: 170px;
+  border-color: grey;
+  border-width: thin;
+  margin-left:12px;
+  margin-bottom: 10px;
+}
+
+
+
+section {
+  background-color: black;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  margin-left: 10px;
+  justify-content: space-around;
+  padding-left: 250px;
+  padding-right: 200px;
+  min-width:500px;
+}
+
+.art-contents {
+  flex-flow:column;
+  flex-wrap:wrap;
+  margin-bottom: 120px;
+  margin-left:100px;
+  width: 1200px;
+  height: 1000px;
+  justify-content:space-around;
+}
+
+.result-info-container a{
+  color: Orange;
+  font-family: 'Ubnutu', sans-serif;
+  /*margin-left: 30%;*/
+  font-size: 40px;
+}
+
+.result-info-container span{
+  color: white;
+  font-size: 25px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.result-info-container{
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.result-image-container img {
+  padding-top: 5%;
+  display: block;
+  margin:auto;
+  min-width: 80%;
+  max-width:80%;
+}
