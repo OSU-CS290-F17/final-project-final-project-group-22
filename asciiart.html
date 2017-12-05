@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="/index.js" charset="utf-8" defer></script>
   </head>
-<body>
 
+<body>
   <header>
       <div class="header-image-container">
         <img src="https://parse-o-matic.com/common/images/pc-extended-ascii.gif" alt="ASCII ART">
@@ -23,12 +23,64 @@
       <h1 class="site-title"><a href="#">ASCII ART</a>
 
 
-        <button id="filter-search-button" class="action-button">Search</button>
-        <button id="filter-submit-button" class="action-button">Submit</button>
+        <button id="search-button" class="action-button">Search</button>
+        <button id="submit-button" class="action-button">Submit</button>
 
 
                 <div class = "black-banner"></div>
   </header>
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+template should search with same HTML
+just change title and search with URL and description
+-->
+  <div id="modal-backdrop" class="hidden"></div>
+    <div id="submit-something-modal" class="hidden">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <h3>Submit a ASCII Masterpiece with a URL!!!</h3>
+          <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+        </div>
+
+        <div class="modal-body">
+
+          <div class="post-input-element">
+            <label for="post-text-input">Item description</label>
+            <br/>
+            <input type="text" id="post-text-input"></input>
+          </div>
+
+          <div class="post-input-element">
+            <label for="post-photo-input">Photo URL</label>
+              <br/>
+            <input type="text" id="post-photo-input">
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" id="modal-create-button" class="modal-create-button">Create</button>
+          <button type="button" id="modal-cancel-button" class="modal-hide-button">Cancel</button>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <main class ="content">
 
 <section id="Robot">
