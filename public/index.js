@@ -5,17 +5,18 @@
 
 
 var allPosts = document.getElementsByClassName("art");
+var storePost = [];
 var k;
+
 for (k = 0; k < allPosts.length; k++) {
     photoURL = allPosts[k].getAttribute("data-photo-link");
-    console.log(photoURL)
+    console.log("photoURL====", photoURL)
     var ascii = ["@","%","#","*","+","=","-",":",".","&nbsp"]
     var image = new Image;
     image.crossOrigin = "anonymous";
     image.src = photoURL;
     image.k = k;
-    image.onload = function(k) {
-      console.log(this.k);
+      console.log("This.k==",this.k);
       var size = 50;
       var canvas = document.createElement('canvas');
       canvas.id =  'canvasImage';
@@ -30,10 +31,11 @@ for (k = 0; k < allPosts.length; k++) {
             string = string +  ascii[Math.round((((pixelData[0]+pixelData[1]+pixelData[2])/3)/28.333))];
           }
           string = string + "<BR/>";
+          // console.log(string);
         }
-        console.log(this.src);
-        allPosts[this.k].childNodes[1].childNodes[1].childNodes[1].innerHTML = string
-    };
+
+        allPosts[k].childNodes[1].childNodes[1].childNodes[1].innerHTML = string;
+
 };
 //};
 
