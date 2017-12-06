@@ -1,12 +1,33 @@
 [
-  {
-    "description": "Robot Arm 6 DOF",
-    "photoURL": "photos/robot.jpg",
-    "userInput": "Robot Arm 6 DOF"
-  },
-  {
-    "description": "Mario",
-    "photoURL": "photos/mario.jpg",
-    "userInput": "Mario"
-  }
+
+      {
+        "Robots":[
+          {
+            "description": "Robot Arm 6 DOF",
+            "photoURL": "photos/robot.jpg",
+            "userInput": "Robot Arm 6 DOF"
+          },
+          {
+            "description": "Mario",
+            "photoURL": "photos/mario.jpg",
+            "userInput": "Mario"
+          }
+        ]
+
+      },
+      {
+        "Animals":[
+          {
+            "description": "Robot Arm 6 DOF",
+            "photoURL": "photos/robot.jpg",
+            "userInput": "Robot Arm 6 DOF"
+          },
+          {
+            "description": "Mario",
+            "photoURL": "photos/mario.jpg",
+            "userInput": "Mario"
+          }
+      ]
+    }
+
 ]

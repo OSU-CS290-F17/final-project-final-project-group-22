@@ -1,11 +1,51 @@
 {{> header}}
 
+<div id="modal-backdrop" class="hidden"></div>
+  <div id="submit-something-modal" class="hidden">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3>Submit a ASCII Masterpiece with a URL!!!</h3>
+        <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="post-input-element">
+          <label for="post-text-input">Item description</label>
+          <br/>
+          <input type="text" id="post-text-input"></input>
+        </div>
+
+        <div class="post-input-element">
+          <label for="post-photo-input">Photo URL</label>
+            <br/>
+          <input type="text" id="post-photo-input">
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" id="modal-create-button" class="modal-create-button">Create</button>
+        <button type="button" id="modal-cancel-button" class="modal-hide-button">Cancel</button>
+
+      </div>
+
+    </div>
+  </div>
+
 <main class ="content">
-  <p id = "plswork"> pls work </p>
-  <section id="art">
+
     {{#each asciiData}}
-      {{> asciiPost}}
+      {{#each this}}
+        <section id= "{{@key}}"
+          <div class="art-container">
+            <h1>{{@key}}</h1>
+            {{#each this}}
+              {{> asciiPost}}
+            {{/each}}
+          </div>
+        </section>
+      {{/each}}
     {{/each}}
-  </section>
+
 
 </main>

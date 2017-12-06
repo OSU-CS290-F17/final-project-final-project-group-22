@@ -1,13 +1,12 @@
-
-
 var images = [];
-var allPosts = document.getElementsByClassName("art");
+var allPosts = document.getElementsByClassName("result-image-container");
 var ascii = ["@","%","#","*","+","=","-",":",".","&nbsp"]
 
 function preloadImages(srcs, imgs, callback) {
     var img;
     var remaining = srcs.length;
     for (var i = 0; i < srcs.length; i++) {
+
         img = new Image();
         img.onload = function() {
             --remaining;
@@ -16,6 +15,7 @@ function preloadImages(srcs, imgs, callback) {
             }
         };
         img.src = allPosts[i].getAttribute("data-photo-link");
+        console.log(img.src)
         imgs.push(img);
     }
 }
@@ -26,7 +26,6 @@ function asciiFunction(allPosts,images){
   var k;
   var ascii = ["@","%","#","*","+","=","-",":",".","&nbsp"]
   for (k = 0; k < allPosts.length; k++) {
-      photoURL = allPosts[k].getAttribute("data-photo-link");
       var image = images[k];
         var size = 70;
         var canvas = document.createElement('canvas');
@@ -45,7 +44,7 @@ function asciiFunction(allPosts,images){
           }
           console.log(image.src);
           console.log(k)
-          allPosts[k].childNodes[1].childNodes[1].childNodes[1].innerHTML = string;
+          allPosts[k].childNodes[1].innerHTML = string;
 
 
   };
