@@ -1,11 +1,12 @@
 var images = [];
-var allPosts = document.getElementsByClassName("art");
+var allPosts = document.getElementsByClassName("result-image-container");
 var ascii = ["@","%","#","*","+","=","-",":",".","&nbsp"]
 
 function preloadImages(srcs, imgs, callback) {
     var img;
     var remaining = srcs.length;
     for (var i = 0; i < srcs.length; i++) {
+
         img = new Image();
         img.onload = function() {
             --remaining;
@@ -14,6 +15,7 @@ function preloadImages(srcs, imgs, callback) {
             }
         };
         img.src = allPosts[i].getAttribute("data-photo-link");
+        console.log(img.src)
         imgs.push(img);
     }
 }
@@ -24,7 +26,6 @@ function asciiFunction(allPosts,images){
   var k;
   var ascii = ["@","%","#","*","+","=","-",":",".","&nbsp"]
   for (k = 0; k < allPosts.length; k++) {
-      photoURL = allPosts[k].getAttribute("data-photo-link");
       var image = images[k];
         var size = 70;
         var canvas = document.createElement('canvas');
@@ -42,10 +43,8 @@ function asciiFunction(allPosts,images){
             string = string + "<BR/>";
           }
           console.log(image.src);
-          console.log(k)
-          allPosts[k].childNodes[1].childNodes[1].childNodes[1].innerHTML = string;
-
-
+          console.log(k);
+          allPosts[k].childNodes[1].innerHTML = string;
   };
 };
   //};
@@ -58,3 +57,35 @@ function asciiFunction(allPosts,images){
 function insertAsciiPost(description, photoURL, price, city, condition) {
 
 };
+
+function showModal() {
+
+  var modal = document.getElementById('submit-something-modal');
+  var modalBackdrop = document.getElementById('modal-backdrop');
+
+  modal.classList.remove('hidden');
+  modalBackdrop.classList.remove('hidden');
+
+}
+
+
+
+window.addEventListener('DOMContentLoaded', function () {
+
+  var addPhotoButton = document.getElementById('submit-button');
+  addPhotoButton.addEventListener('click', showModal);
+
+  var searchButton = document.getElementById('submit-button');
+    addPhotoButton.addEventListener('click', showModal);
+
+  var modalAcceptButton = document.getElementById('modal-accept');
+  modalAcceptButton.addEventListener('click', handleModalAcceptClick);
+
+  var modalHideButtons = document.getElementsByClassName('modal-hide-button');
+  for (var i = 0; i < modalHideButtons.length; i++) {
+    modalHideButtons[i].addEventListener('click', hideModal);
+  }
+
+
+
+});
