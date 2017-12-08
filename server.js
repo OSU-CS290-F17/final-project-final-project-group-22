@@ -1,12 +1,12 @@
 /*
  * Names: Jeramie Chew, Tucker Shannn
  */
-
+var assert = require('assert');
 var path = require('path');
 var express = require('express');
 var exphbs = require('express-handlebars');
 var bodyParser = require('body-parser');
-var MongoClient = require('mongodb').MongoClient;
+var mongoClient = require('mongodb').MongoClient;
 var asciiData = require('./asciiData');
 var Handlebars = require('handlebars');
 var app = express();
@@ -14,20 +14,24 @@ var port = process.env.PORT || 3000;
 var booltest = 1;
 var FileReader = require('filereader')
 
-var mongoHost = process.env.MONGO_HOST;
-var mongoPort = process.env.MONGO_PORT || 27017;
-var mongoUser = process.env.MONGO_USER;
-var mongoPassword = process.env.MONGO_PASSWORD;
-var mongoDBName = process.env.MONGO_DB;
 
-var mongoURL = 'mongodb://' + mongoUser + ':' + mongoPassword +
-  '@' + mongoHost + ':' + mongoPort + '/' + mongoDBName;
-
-var mongoConnection = null;
+var mongoURL = process.env.MONGO_URL || 'mongodb://cs290_chewje:cs290_chewje@classmongo.engr.oregonstate.edu:27017/cs290_chewje';
+console.log("==mongoURL", mongoURL);
+var mongoConnection;
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
-app.set('view engine', 'handlebars')
+app.set('view engine', 'handlebars');
 
+var mongoDBDatabase;
+
+mongoClient.connect(mongoURL, function(err, db) {
+  assert.equal(null, err);
+  console.log("Connected successfully to server");
+  mongoConnection = db;
+  app.listen(port, function () {
+    console.log("== Server is listening on port", port);
+  });
+});
 app.use(bodyParser.json());
 
 app.get('/', function (req, res) {
@@ -35,29 +39,10 @@ app.get('/', function (req, res) {
 });
 
 
-
-app.get('/post', function (req, res) {
-var peopleDataCollection = mongoConnection.collection('asciiData');
-  peopleDataCollection.find({}).toArray(function (err, results) {
-    if (err) {
-      res.status(500).send("Error fetching art from DB");
-    } else {
-      console.log("== query results:", results);
-      res.status(200).render('main', {
-        people: results
-      });
-    }
-  });
-});
-
-
-
-
-
 app.get('/post/:postId', function(req, res, next) {
   var postID= req.params.postId;
   //console.log(postID + 99);
-  //console.log("==postID:", postData[1]);
+  console.log("==postID:", postData[postID]);
   if (postData[postID]) {
     var person = postData[postID];
     console.log(person);
@@ -74,6 +59,6 @@ app.get('*', function (req, res) {
   res.status(404).render('404');
 });
 
-app.listen(port, function () {
-  console.log("== Server is listening on port", port);
-});
+// app.listen(port, function () {
+//   console.log("== Server is listening on port", port);
+// });

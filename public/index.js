@@ -68,24 +68,38 @@ function showModal() {
 
 }
 
+function searchShowModal() {
+  console.log("tried to close");
+  var smodal = document.getElementById('search-something-modal');
+  var smodalBackdrop = document.getElementById('search-modal-backdrop');
+
+  smodal.classList.remove('hidden');
+  smodalBackdrop.classList.remove('hidden');
+
+}
+
+function hideModal() {
+  var sellSomethingModal = document.getElementById('submit-something-modal');
+  var modalBackdrop = document.getElementById('modal-backdrop');
+  sellSomethingModal.classList.add('hidden');
+  modalBackdrop.classList.add('hidden');
+  clearSellModals();
+}
+
+
 
 
 window.addEventListener('DOMContentLoaded', function () {
 
+
   var addPhotoButton = document.getElementById('submit-button');
   addPhotoButton.addEventListener('click', showModal);
 
-  var searchButton = document.getElementById('submit-button');
-    addPhotoButton.addEventListener('click', showModal);
+  // var modalAcceptButton = document.getElementById('modal-accept');
+  // modalAcceptButton.addEventListener('click', handleModalAcceptClick);
 
-  var modalAcceptButton = document.getElementById('modal-accept');
-  modalAcceptButton.addEventListener('click', handleModalAcceptClick);
-
-  var modalHideButtons = document.getElementsByClassName('modal-hide-button');
-  for (var i = 0; i < modalHideButtons.length; i++) {
-    modalHideButtons[i].addEventListener('click', hideModal);
+  var cancelButton = document.getElementsByClassName('modal-cancel-button');
+  for (var i = 0; i < cancelButton.length; i++) {
+    cancelButton[i].addEventListener('click', hideModal);
   }
-
-
-
 });
