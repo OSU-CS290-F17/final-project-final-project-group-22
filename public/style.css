@@ -1,7 +1,6 @@
 header {
   font-family: 'Ubuntu', sans-serif;
   }
-
 body {
   font-family: 'Ubuntu';
 }
@@ -18,34 +17,20 @@ body {
   background-color: rgba(0, 0, 0, 0.85);
 }
 
+#search-modal-backdrop {
+  position: fixed;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
 #submit-something-modal {
   position: fixed;
-  top: 400px;
-  left: 700px;
+  top: 200px;
+  left: 500px;
   width:1000px;
-  max-height: 800px;
-  z-index: 1010;
+  height: 700px;
+  z-index: 1000;
   overflow: scroll;
-  border-radius: 5%;
-}
-
-.modal-dialog {
-  width:100%;
-  height: 100%;
-  margin: 40px;
-  background-color: blue;
-  border-radius: 15px;
-}
-
-.modal-submit-container {
-  position: fixed;
-  background-color: blue;
-  height: 500px;
-  width: 900px;
-  top: 300px;
-  left: 600px;
-  border-radius: 2%;
-  border-style: ridge;
 }
 
 .modal-header {
@@ -53,9 +38,8 @@ body {
   padding: 10px 30px;
   background:black;
   width:100%;
-  height:20%;
+  height:10%;
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
-  border-radius: 5%
 }
 
 .modal-header h3 {
@@ -100,76 +84,68 @@ body {
   background-color: black;
   height: 120px;
 }
-.asciiBox{
+
+.asciiBox {
+  width: 600px;
   color: Black;
   font-family: "Courier New", Courier,monospace;
   font-size:10px;
   line-height:6px;
 }
 
+
+
 .post-input-element{
-  position: relative;
-  top: 200px;
-  padding:20px;
-  margin-left: 50px;
-  font-weight: bold;
+position: relative;
+top:150px;
+height:450px;
+
+}
+.post-input-element label {
+background: #f67811;
+color:white;
+font-size: 25px;
 }
 
-
-label {
-position:relative;
-  font-size: 45px;
-  font-weight: bold;
-  border-style: solid;
-  border-color: black;
-  border-style: groove;
-  background-color: black;
-  color:white;
-  height: 20px;
-  bottom:80px;
-  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
-}
-
-input {
-  position:relative;
-  bottom:70px;
-  height:40px;
-  width:80%;
-  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
-  font-size: 25px;
+.post-input-element input {
+height: 20px;
+width: 80%;
+margin: 10px;
 }
 .modal-body {
   background:#abb0ba;
   width: 1000px;
-  height:400px;
+  height:450px;
 box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
 }
 
-.modal-footer {
-  height:50px;
-}
+/*.modal-footer {
+  height:100px;
+}*/
 .modal-create-button {
+  position:relative;
   height: 50px;
-  width:970px;
-  box-shadow: 4px 4px 12px rgba(1, 1, 1, 0.25);
+  width:1000px;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
   font-size: 25px;
   font-style: 'Ubuntu';
   font-weight: bold;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 1);
 }
 
 #modal-create-button.action-button:hover{
   color: black;
 }
 
-.modal-hide-button{
+.modal-cancel-button{
   position:relative;
   height: 50px;
-  width:970px;
+  width:1000px;
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
   font-size: 25px;
   font-style: 'Ubuntu';
   font-weight: bold;
-    box-shadow: 4px 4px 12px rgba(0, 0, 0, 1);
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 1);
 }
 
 #modal-cancel-button.action-button:hover{
@@ -183,13 +159,19 @@ box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .site-title a {
-  /*position: relative;*/
-  /*display: inline-block;*/
   font-weight:100;
   font-size: 100px;
   font-stretch;
   text-decoration: none;
   color:black;
+}
+
+
+.result-title {
+  position:relative;
+  top: 40px;
+  left: 220px;
+  display:inline-block;
 }
 
 
@@ -293,9 +275,9 @@ label {
 }
 
 .art {
-   height: 600px;
+   height: 650px;
    width: 700px;
-   margin-top:50px;
+   margin-top:20px;
    margin-left: 40px;
    border: 1px solid black;
    border-radius: 3px;
@@ -304,27 +286,17 @@ label {
 
 }
 
-
-
-.result-image-container img {
+.result-image-container {
+line-height: 2px;
 width:100%;
-height:450px;
-box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+margin-left: 75px;
+margin-top: 40px;
 }
-
-/*.result-info-container a{
-  color: Orange;
-  font-family: 'Ubnutu', sans-serif;
-  font-size: 40px;
-}*/
-
-/*.result-info-container span{
-  color: white;
-  font-size: 25px;
-  font-family: 'Ubuntu', sans-serif;
-}*/
 
 .result-info-container{
   margin-top: 10px;
-  margin-left: 5px;
+}
+
+.result-info-container a{
+  font-size: 25px;
 }

@@ -8,24 +8,49 @@
             "userInput": "Robot Arm 6 DOF"
           },
           {
-            "description": "Mario",
-            "photoURL": "photos/mario.jpg",
-            "userInput": "Mario"
+            "description": "Medical Robot",
+            "photoURL": "photos/medical-robot.jpg",
+            "userInput": "Make Safe Lives"
+          },
+          {
+            "description": "Robot Face",
+            "photoURL": "photos/Robotface.jpg",
+            "userInput": "Look into my eyes"
+          },
+          {
+            "description": "Robot Mano",
+            "photoURL": "photos/hand.jpg",
+            "userInput": "Just a flick"
+          },
+          {
+            "description": "Bender",
+            "photoURL": "photos/bender.jpg",
+            "userInput": "Making friends"
           }
         ]
 
       },
       {
-        "Animals":[
-          {
-            "description": "Robot Arm 6 DOF",
-            "photoURL": "photos/robot.jpg",
-            "userInput": "Robot Arm 6 DOF"
-          },
+        "Heros":[
           {
             "description": "Mario",
             "photoURL": "photos/mario.jpg",
             "userInput": "Mario"
+          },
+          {
+            "description": "Punisher",
+            "photoURL": "photos/punisher.jpg",
+            "userInput": "Standing tall"
+          },
+          {
+            "description": "Batman",
+            "photoURL": "photos/batman.jpg",
+            "userInput": "Soldier of Darkness"
+          },
+          {
+            "description": "Deadpool",
+            "photoURL": "photos/Deadpool.jpg",
+            "userInput": "My Spirit Animal"
           }
       ]
     }
