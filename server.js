@@ -14,7 +14,6 @@ var port = process.env.PORT || 3000;
 var booltest = 1;
 var FileReader = require('filereader')
 
-
 var mongoURL = process.env.MONGO_URL || 'mongodb://cs290_chewje:cs290_chewje@classmongo.engr.oregonstate.edu:27017/cs290_chewje';
 console.log("==mongoURL", mongoURL);
 var mongoConnection;
@@ -58,7 +57,3 @@ app.use(express.static('public'));
 app.get('*', function (req, res) {
   res.status(404).render('404');
 });
-
-// app.listen(port, function () {
-//   console.log("== Server is listening on port", port);
-// });

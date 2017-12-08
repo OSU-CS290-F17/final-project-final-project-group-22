@@ -47,15 +47,26 @@ function asciiFunction(allPosts,images){
           allPosts[k].childNodes[1].innerHTML = string;
   };
 };
-  //};
 
-// function hidePosts(){
-//   var artPosts = document.getElementsByClassName('result-image-container');
-//   artPosts.classList.add('hidden');
-//   console.log("test");
-// };
-function insertAsciiPost(description, photoURL, price, city, condition) {
+function insertAsciiPost(description, photoURL, title, section) {
 
+  var insertArgs = {
+    photoURL:photoURL,
+    section:section,
+    title:title,
+    description:description
+  };
+
+  var postHTML = Handlebars.templates.postHTML(insertArgs);
+
+  var photoURL = document.getElementById('post-section-input').value;
+  var  price = document.getElementById('post-title-input').value;
+  var city = document.getElementById('post-description-input').value;
+  var description = document.getElementById('post-photoURL-input').value;
+
+  var postHTML = Handlebars.templates.postHTML(insertArgs);
+  return postHTML;
+  }
 };
 
 function showModal() {
@@ -86,17 +97,9 @@ function hideModal() {
   clearSellModals();
 }
 
-
-
-
 window.addEventListener('DOMContentLoaded', function () {
-
-
   var addPhotoButton = document.getElementById('submit-button');
   addPhotoButton.addEventListener('click', showModal);
-
-  // var modalAcceptButton = document.getElementById('modal-accept');
-  // modalAcceptButton.addEventListener('click', handleModalAcceptClick);
 
   var cancelButton = document.getElementsByClassName('modal-cancel-button');
   for (var i = 0; i < cancelButton.length; i++) {
